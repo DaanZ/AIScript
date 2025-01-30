@@ -32,6 +32,7 @@ if __name__ == "__main__":
     if "history" not in streamlit.session_state:
         streamlit.session_state.history = History()
         streamlit.session_state.history.system(instructions)
+        streamlit.session_state.history.assistant("Write a message that you want to have in the style of Erin's Persona!")
         streamlit.session_state.initial_size = 0
     # Main program logic (call this function when you want to start the thread)
     try:
